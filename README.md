@@ -1,4 +1,5 @@
-# ASP CIE — Abstract Country Orbits (POO, déterministe)
+# ASP CIE — Abstract Country
+ Orbits (POO, déterministe)
 
 Ce projet transforme des données compagnies aériennes **ASP_CIE** en **œuvres abstraites** :  
 chaque **pays** devient un **anneau** concentrique et chaque **compagnie** y laisse des **traces** (arc, spikes, bulle) dont la **taille** et la **couleur** encodent des métriques.
@@ -7,6 +8,13 @@ chaque **pays** devient un **anneau** concentrique et chaque **compagnie** y lai
 ```bash
 python3 -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
 python -m pip install pandas numpy matplotlib
+```
+
+Les dépendances sont aussi listées dans `requirements.txt` :
+
+```bash
+# après activation du virtualenv
+python -m pip install -r requirements.txt
 ```
 
 ## Utilisation
@@ -103,14 +111,9 @@ python art_abstract_country_oop.py --input data/mini.csv --small_data_threshold 
 - Pour un mini CSV (≤ 10 lignes), garde les défauts et **observe** l’effet du **small‑data mode**.  
 - Si tu veux comparer des années : mets-les dans un **dossier**, lance avec `--ask` pour choisir.
 
-## Dépannage
-- **`zsh: command not found: python`** → utilise `python3`, ou active le venv (après `source .venv/bin/activate`, la commande devient `python`).  
-- **Avertissement Matplotlib “get_cmap deprecated”** → le code utilise déjà `matplotlib.colormaps`. Assure-toi d’avoir Matplotlib ≥ 3.7.  
-- **Image très sombre / 3‑4 traits** → c’est typique d’un très petit dataset ; le **small‑data mode** grossit arc/spikes/bulles automatiquement.
-
 ---
 
-## Structure conseillée
+## Structure
 ```
 .
 ├── art_abstract_country_oop.py      # script principal (POO)
@@ -119,3 +122,12 @@ python art_abstract_country_oop.py --input data/mini.csv --small_data_threshold 
 └── out/
     └── abstract.png                 # sorties (suffixe auto _1, _2…)
 ```
+
+## Equipe
+
+Mehdi ZERROUKI
+Corentin SANJUAN
+Gabriel FAUCON
+Lilia QUISPE LÒPEZ
+Fabien CHAN PIU
+Minh Dung KIEU
