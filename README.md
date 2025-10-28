@@ -1,15 +1,15 @@
-# 🌌 ASP CIE — Abstract Country Orbits (POO, déterministe)
+# ASP CIE — Abstract Country Orbits (POO, déterministe)
 
 Ce projet transforme des données compagnies aériennes **ASP_CIE** en **œuvres abstraites** :  
 chaque **pays** devient un **anneau** concentrique et chaque **compagnie** y laisse des **traces** (arc, spikes, bulle) dont la **taille** et la **couleur** encodent des métriques.
 
-## 🚀 Installation rapide
+## Installation rapide
 ```bash
 python3 -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
 python -m pip install pandas numpy matplotlib
 ```
 
-## ▶️ Utilisation
+## Utilisation
 ```bash
 # Fichier direct
 python art_abstract_country_oop.py --input data/ASP_CIE_2024.csv --out out/abstract.png
@@ -24,7 +24,7 @@ python art_abstract_country_oop.py --input data/ASP_CIE_2024.csv   --country_fil
 python art_abstract_country_oop.py --input data/mini.csv --small_data_threshold 9999
 ```
 
-## 🧭 Signification visuelle
+## Signification visuelle
 - **Anneau** = **pays** (top N par somme de `CIE_PAX`).  
 - **Arc** (portion de l’anneau) = **compagnie** du pays : **longueur ∝ `CIE_PAX`** et **couleur = f(`CIE_PAX`)**.  
 - **Spikes** (petites aiguilles vers l’extérieur) = **vols** : **densité & longueur ∝ `CIE_VOL`** et **couleur = f(`CIE_VOL`)**.  
@@ -34,7 +34,7 @@ python art_abstract_country_oop.py --input data/mini.csv --small_data_threshold 
 
 ---
 
-## 🧩 Explication du code (POO, fichiers principaux)
+## Explication du code (POO, fichiers principaux)
 
 ### 1) `ASPDataLoader`
 - **But** : lire un **CSV unique** ou **plusieurs** CSV `ASP_CIE_*` d’un **dossier** (séparateur `;`, décimale `,`).  
@@ -103,14 +103,14 @@ python art_abstract_country_oop.py --input data/mini.csv --small_data_threshold 
 - Pour un mini CSV (≤ 10 lignes), garde les défauts et **observe** l’effet du **small‑data mode**.  
 - Si tu veux comparer des années : mets-les dans un **dossier**, lance avec `--ask` pour choisir.
 
-## 🩹 Dépannage
+## Dépannage
 - **`zsh: command not found: python`** → utilise `python3`, ou active le venv (après `source .venv/bin/activate`, la commande devient `python`).  
 - **Avertissement Matplotlib “get_cmap deprecated”** → le code utilise déjà `matplotlib.colormaps`. Assure-toi d’avoir Matplotlib ≥ 3.7.  
 - **Image très sombre / 3‑4 traits** → c’est typique d’un très petit dataset ; le **small‑data mode** grossit arc/spikes/bulles automatiquement.
 
 ---
 
-## 📦 Structure conseillée
+## Structure conseillée
 ```
 .
 ├── art_abstract_country_oop.py      # script principal (POO)
