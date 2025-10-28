@@ -90,9 +90,9 @@ def plot_abstract_country(df: pd.DataFrame, out_path: Path, palette: str = "viri
 
     rng = np.random.RandomState(seed)
     # Subtle starry background
-    n_glow = 1200
-    gx, gy = rng.rand(n_glow), rng.rand(n_glow)
-    ax.scatter(gx, gy, s=0.5, alpha=0.05, linewidths=0, color="white" if bg!="white" else "black")
+    #n_glow = 1200
+    #gx, gy = rng.rand(n_glow), rng.rand(n_glow)
+    #ax.scatter(gx, gy, s=0.5, alpha=0.05, linewidths=0, color="white" if bg!="white" else "black")
 
     # ring radii
     r_in = inner_radius
