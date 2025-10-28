@@ -1,6 +1,3 @@
-# ASP CIE — Abstract Country
- Orbits (POO, déterministe)
-
 Ce projet transforme des données compagnies aériennes **ASP_CIE** en **œuvres abstraites** :  
 chaque **pays** devient un **anneau** concentrique et chaque **compagnie** y laisse des **traces** (arc, spikes, bulle) dont la **taille** et la **couleur** encodent des métriques.
 
@@ -89,7 +86,7 @@ python art_abstract_country_oop.py --input data/mini.csv --small_data_threshold 
 
 ---
 
-## ⚙️ Options CLI
+## Options CLI
 
 | Option | Description |
 |---|---|
@@ -106,13 +103,6 @@ python art_abstract_country_oop.py --input data/mini.csv --small_data_threshold 
 
 ---
 
-## 🧪 Conseils de lecture & tests
-- Commence avec **un seul CSV** (ex. 2024), puis **varie** `--max_countries` et `--palette`.  
-- Pour un mini CSV (≤ 10 lignes), garde les défauts et **observe** l’effet du **small‑data mode**.  
-- Si tu veux comparer des années : mets-les dans un **dossier**, lance avec `--ask` pour choisir.
-
----
-
 ## Structure
 ```
 .
@@ -123,11 +113,11 @@ python art_abstract_country_oop.py --input data/mini.csv --small_data_threshold 
     └── abstract.png                 # sorties (suffixe auto _1, _2…)
 ```
 
-## Equipe
+## Équipe 5
 
-Mehdi ZERROUKI
-Corentin SANJUAN
-Gabriel FAUCON
-Lilia QUISPE LÒPEZ
-Fabien CHAN PIU
+Mehdi ZERROUKI  
+Corentin SANJUAN  
+Gabriel FAUCON  
+Lilia QUISPE LÒPEZ  
+Fabien CHAN PIU  
 Minh Dung KIEU
