@@ -39,7 +39,7 @@ python art_abstract_country_oop.py --input data/mini.csv --small_data_threshold 
 
 ---
 
-## Explication du code (POO, fichiers principaux)
+## Explication du code
 
 ### 1) `ASPDataLoader`
 - **But** : lire un **CSV unique** ou **plusieurs** CSV `ASP_CIE_*` d’un **dossier** (séparateur `;`, décimale `,`).  
