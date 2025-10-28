@@ -1,4 +1,8 @@
-pandas
-numpy
-matplotlib
-scikit-learn>=1.2
+# --- Core scientific stack ---
+pandas>=2.2.0
+numpy>=1.26.0
+matplotlib>=3.8.0
+
+# --- CLI and typing ---
+argparse>=1.4.0
+typing_extensions>=4.10.0
